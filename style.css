@@ -1414,17 +1414,16 @@ button {
 }
 
 /* Keypad Layout */
-.keypad {
+.keypad{
     display: grid;
-    grid-template-columns: repeat(3, 80px);
-    gap: 15px;
-    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    gap: 14px;
+    margin-top: 20px;
 }
 
-/* iPhone Style Buttons */
-.keypad button {
-    width: 80px;
-    height: 80px;
+.keypad button{
+    aspect-ratio: 1 / 1;
+    width: 100%;
     border-radius: 50%;
     border: none;
 
@@ -1432,12 +1431,23 @@ button {
     color: white;
 
     background: rgba(255,255,255,0.15);
-
-    cursor: pointer;
 }
 
 .keypad button:hover {
     background: rgba(255,255,255,0.3);
 }
 
+
+@media (max-width: 480px) {
+
+  .lock-container h2 {
+    font-size: 22px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+}
 
